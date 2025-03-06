@@ -1,0 +1,38 @@
+#navigation-container {
+  width: 5%;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Only enable hover effect on medium and larger screens */
+@media (min-width: 768px) {
+  #navigation-container:hover {
+    width: 15%;
+  }
+
+  #navigation-container:hover .nav-item-name {
+    display: block;
+    opacity: 1;
+  }
+
+  #navigation-container:hover .search-input {
+    display: block;
+    opacity: 1;
+  }
+
+  #navigation-container:hover .search-icon {
+    display: none;
+  }
+}
+
+/* Small screen styles: Expand sidebar when toggled */
+@media (max-width: 767px) {
+  #navigation-container {
+    width: 30%;
+  }
+
+  #navigation-container .nav-item-name {
+    display: block;
+    opacity: 1;
+  }
+}
